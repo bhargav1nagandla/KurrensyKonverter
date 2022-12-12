@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CurrencyConverter.Help"
+             Title="Help">
+    <VerticalStackLayout>
+        <Label 
+            VerticalOptions="Center"
+            HorizontalOptions="Fill"
+            FontAttributes="Bold"
+            FontSize="Small"
+            TextType="Html"
+            Text="https://www.countries-ofthe-world.com/world-currencies.html "
+            />
+        
+    </VerticalStackLayout>
+</ContentPage>
