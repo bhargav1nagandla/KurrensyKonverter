@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="CurrencyConverter.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Image Source="c2.png" HeightRequest="150" WidthRequest="150" /> 
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Welcome!" FontSize="28" TextColor="Gray" HorizontalTextAlignment="Center" />
+                <Label x:Name="Result1" Text="Type Your Amount Below to Convert" FontSize="18" TextColor="Green" HorizontalTextAlignment="Center" />
+
+            </VerticalStackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Frame ZIndex="1" HasShadow="True" 
+                       BorderColor="White"
+                       HeightRequest="56" WidthRequest="56" CornerRadius="28">
+                    <Image Source="c1.png" HeightRequest="20" WidthRequest="20" />
+                </Frame>
+                <Frame HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White" HorizontalOptions="FillAndExpand">
+                    <Entry Margin="20,0,0,0" x:Name="Amount" Placeholder="Enter Amount" Keyboard="Email" />
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Frame ZIndex="1" HasShadow="True" 
+                       BorderColor="White"
+                       HeightRequest="56" WidthRequest="56" CornerRadius="28">
+                    <Image Source="c1.png" HeightRequest="20" WidthRequest="20" />
+                </Frame>
+                <Frame HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White" HorizontalOptions="FillAndExpand">
+                    <Entry Margin="20,0,0,0" x:Name="c1" Placeholder="Source Country" Keyboard="Email" />
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Frame ZIndex="1" HasShadow="True" 
+                       BorderColor="White"
+                       HeightRequest="56" WidthRequest="56" CornerRadius="28">
+                    <Image Source="c1.png" HeightRequest="20" WidthRequest="20" />
+                </Frame>
+                <Frame HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White" HorizontalOptions="FillAndExpand">
+                    <Entry Margin="20,0,0,0" x:Name="c2" Placeholder="Destination Country" Keyboard="Email" />
+                </Frame>
+            </StackLayout>
+            <Button Text="CONVERT" Clicked="Convert" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef" />
+            <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
+                <Label x:Name="Result"  Text="Don't Have account?" TextColor="Gray"></Label>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
